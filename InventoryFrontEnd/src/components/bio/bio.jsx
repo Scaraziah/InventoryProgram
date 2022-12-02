@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, ListGroup, ListGroupItem, Button } from "react-bootstrap";
-// import ProfilePic from './profilepic/profilePic';
 import CreateBio from './newBio';
 
 
@@ -28,7 +27,6 @@ function Bio(props) {
 
   return (
     <Card style={{ width: "18rem" }}>
-      {/* <ProfilePic /> */}
       <Card.Body>
         {/*********** PROFILE NAME LOGIC GOES HERE ***********/}
         <Card.Title>Profile Name</Card.Title>
