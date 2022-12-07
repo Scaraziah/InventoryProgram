@@ -60,6 +60,7 @@ function validateUser(user) {
 function validatePost(post) {
     const schema = Joi.object({
         name: Joi.string().min(5).max(50).required(),
+        //rename lat =  and lng = lng in other areas
         // lat: Joi.number().required(),
         // lng: Joi.number().required(),
         // huntType: Joi.string().min(1).max(8).required(),
