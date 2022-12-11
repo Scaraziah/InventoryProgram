@@ -7,8 +7,10 @@ const postSchema = new mongoose.Schema({
     name: {type: String, required: true, minlength: 5, maxlength: 50 },
     description: {type: String, required: true, minlength: 5, maxlength: 50 },
     itemType: {type: String, required: true, minlength: 5, maxlength: 50 },
-    quantaty: {type: Number, required: true, minlength: 1, maxlength: 99999},
-    value: {type: Number, required: true, minlength: 1, maxlength: 99999},
+    quantaty: {type: Number, required: true, minlength: 1, maxlength: 10000},
+    gold: {type: Number, required: true, minlength: 1, maxlength: 99999},
+    silver: {type: Number, required: true, minlength: 1, maxlength: 99999},
+    copper: {type: Number, required: true, minlength: 1, maxlength: 99999},
 });
 
 const bioSchema = new mongoose.Schema({
@@ -51,7 +53,9 @@ function validatePost(post) {
         name: Joi.string().min(5).max(50).required(),
         description: Joi.string().min(5).max(50).required(),
         itemType: Joi.string().min(1).max(8).required(),
-        value: Joi.number().min(1).max(99999).required(),
+        gold: Joi.number().min(1).max(1000).required(),
+        silver: Joi.number().min(1).max(1000).required(),
+        copper: Joi.number().min(1).max(1000).required(),
         quantaty: Joi.number().min(1).max(99999).required(),
     });
     return schema.validate(post);
