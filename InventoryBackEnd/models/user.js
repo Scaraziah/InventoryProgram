@@ -16,8 +16,8 @@ const postSchema = new mongoose.Schema({
 const bioSchema = new mongoose.Schema({
     name: {type: String, required: true, minlength: 5, maxlength: 50 },
     proPic: {type: String, required: true },
-    text: {type: String, required: true, minlength: 1, maxlength: 1000},
-    timeStamp: {type: Date, default: Date.now()},
+    // text: {type: String, required: true, minlength: 1, maxlength: 1000},
+    // timeStamp: {type: Date, default: Date.now()},
 })
 
 const userSchema = new mongoose.Schema({
